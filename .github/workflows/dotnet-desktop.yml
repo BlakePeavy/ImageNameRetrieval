@@ -1,0 +1,49 @@
+name: Windows Build
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    env:
+      Solution_Name: ImageNameRetrieval.sln
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # Install .NET SDK
+      - name: Install .NET SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      # Restore dependencies
+      - name: Restore dependencies
+        run: dotnet restore ${{ env.Solution_Name }}
+
+      # Build application
+      - name: Build application
+        run: dotnet publish ImageNameRetrieval.App/ImageNameRetrieval.App.csproj -c Release -r win-x64 --self-contained true -o ./publish
+
+      # Run tests
+      - name: Run tests
+        run: dotnet test ${{ env.Solution_Name }}
+
+      # Package application as a ZIP
+      - name: Package as ZIP
+        run: Compress-Archive -Path ./publish/* -DestinationPath ./publish/ImageNameRetrieval-win-x64.zip
+
+      # Upload the ZIP artifact
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: ImageNameRetrieval-win-x64
+          path: ./publish/ImageNameRetrieval-win-x64.zip
