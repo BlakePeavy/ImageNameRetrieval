@@ -17,7 +17,7 @@ namespace ImageNameRetrieval.Service
         private readonly string _url = "https://api.pexels.com/v1/";
         private readonly HttpClient _httpClient;
 
-        private readonly string API_KEY = Environment.GetEnvironmentVariable("API_KEY");
+        public string API_KEY = "";// Environment.GetEnvironmentVariable("API_KEY");
                                           // Azure export this as a function and store key in keyvault. 
         public PexelsService(HttpClient httpClient)
         {

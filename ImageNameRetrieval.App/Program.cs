@@ -26,6 +26,8 @@ namespace ImageNameRetrieval.App
                     try
                     {
                         var pexels = new PexelsService(new System.Net.Http.HttpClient());
+                        Console.WriteLine("Please input a API Key for Pexel: ");
+                        pexels.API_KEY = Console.ReadLine();
                         var response = await pexels.GetImages(pexelQuery, pexelAmount);
 
                         // for loop to print the alt tag (name of the photo).
