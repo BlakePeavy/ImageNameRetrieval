@@ -62,9 +62,9 @@ Once the application is running, it will prompt you to input a search query, the
 
 ### Sample Interaction
 ```
+Please input a API Key for Pexel: API_KEY
 Image Search Query: nature
 Maximum search display (1-25): 5
-Please input a API Key for Pexel: API_KEY
 Planet Earth
 Earth Wallpaper
 Blue and White Planet Display
