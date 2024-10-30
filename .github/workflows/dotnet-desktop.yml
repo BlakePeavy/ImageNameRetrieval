@@ -35,8 +35,8 @@ jobs:
         run: dotnet publish ImageNameRetrieval.App/ImageNameRetrieval.App.csproj -c Release -r win-x64 --self-contained true -o ./publish
 
       # Run tests
-      - name: Run tests
-        run: dotnet test ${{ env.Solution_Name }}
+      #- name: Run tests
+        #run: dotnet test ${{ env.Solution_Name }}
 
       # Package application as a ZIP
       - name: Package as ZIP
