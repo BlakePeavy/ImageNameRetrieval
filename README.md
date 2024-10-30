@@ -14,6 +14,8 @@
 
 **ImageNameRetrieval** allows you to quickly retrieve image information from Pexels based on a keyword search.
 
+---
+
 ## 2. Installation
 
 ### Prerequisites
@@ -41,6 +43,8 @@ The application requires a **Pexels API key** to access image data from the Pexe
 
 1. Go to [Pexels Developer](https://www.pexels.com/api/) and sign up for an account if you don’t have one.
 2. Navigate to the **API Documentation** page and generate an API key.
+
+---
 
 ## 4. Usage
 Once the application is running, it will prompt you to input a search query, the number of images to retrieve, and the API key.
@@ -77,4 +81,6 @@ Round Brown and Black Ornament
 
 #### Q: Can I retrieve more than 25 images at once?
    **A**: Currently, the maximum allowed is 25.
+
+---
 
