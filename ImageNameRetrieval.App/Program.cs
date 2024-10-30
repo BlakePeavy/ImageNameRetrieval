@@ -16,15 +16,15 @@ namespace ImageNameRetrieval.App
         static bool running = true;
         static async Task Main(string[] args)
         {
+            var pexels = new PexelsService(new System.Net.Http.HttpClient());
+            Console.WriteLine("Please input a API Key for Pexel: ");
+            pexels.API_KEY = Console.ReadLine();
             while (running)
             {
                 if (InputQuery() && InputAmount())
                 {
                     try
                     {
-                        var pexels = new PexelsService(new System.Net.Http.HttpClient());
-                        Console.WriteLine("Please input a API Key for Pexel: ");
-                        pexels.API_KEY = Console.ReadLine();
                         var response = await pexels.GetImages(pexelQuery, pexelAmount);
 
                         // for loop to print the alt tag (name of the photo).
