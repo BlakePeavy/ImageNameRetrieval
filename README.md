@@ -8,9 +8,7 @@
 2. [Installation](#installation)
 3. [Configuration](#configuration)
 4. [Usage](#usage)
-5. [Troubleshooting](#troubleshooting)
-6. [FAQ](#faq)
-7. [Support](#support)
+5. [FAQ](#faq)
 
 ## 1. Getting Started
 
@@ -21,7 +19,19 @@
 ### Prerequisites
 - **Windows** operating system (self-contained executable built for Windows).
 
-### TODO
+### Installation Steps
+
+1. **Download the package**:
+   - Go to [Releases](https://github.com/BlakePeavy/ImageNameRetrieval/releases/tag/1.0.0.0) and download the current package.
+
+2. **Extract the package**:
+   - Right click the downloaded ZIP file and select **Extract All**.
+
+3. **Run the Application**:
+   - Open the extracted folder.
+   - Open 'ImageNameRetrieval.App.exe' to launch the application.
+
+---
 
 ## 3. Configuration
 
@@ -39,11 +49,14 @@ Once the application is running, it will prompt you to input a search query, the
 1. **Start the Application**:
    - Run `ImageNameRetrieval.exe`.
 
-2. **Enter a Search Query**:
+2. **Enter Pexels API Key**:
+   - Input Pexels API Key obtained during configuration.
+
+3. **Enter a Search Query**:
    - Input a keyword for image search (e.g., `birds`, `planets`).
    - Only letters and numbers are accepted (e.g., `planets` is valid, `pl@nets` is invalid).
 
-3. **Specify Number of Results**:
+4. **Specify Number of Results**:
    - Enter the maximum number of images to retrieve (between 1 and 25).
    - The app will output the `alt` text (description) for each image found in the search results.
 
@@ -59,4 +72,9 @@ Eye of the Storm Image from Outer Space
 Round Brown and Black Ornament
 ```
 ---
+
+## 5. FAQ
+
+#### Q: Can I retrieve more than 25 images at once?
+   **A**: Currently, the maximum allowed is 25.
 
